@@ -1,0 +1,15 @@
+.logo-area{
+    height: 74px;
+    width: 74px;
+}
+.status-btn{
+    margin-left: 262px;
+    height: 34px;
+}
+.serviceOrderList-content{
+    margin-top: 50px;
+    padding: 30px;
+    border: 1px solid #DC3545;
+    border-radius: 5px;
+    margin-left: 45px;
+}

@@ -1,0 +1,27 @@
+.logo-container{
+    margin-bottom: 10px;
+}
+.logo-img{
+    height: 47px;
+    width: 150px;
+    margin-top: 34px;
+    margin-left: 30px;
+}
+.icon-style{
+    margin-left: 30px;
+    color: #DC3545 !important;
+}
+.dashboard{
+    margin-left: 10px;
+    color: #DC3545 !important;
+}
+.menu-item{
+    margin-bottom: 20px;
+    
+}
+.sidebar-content{
+    top: 0; 
+    bottom: -10000mm;
+    overflow: visible;
+    border-right: 5px double #DC3545;
+}

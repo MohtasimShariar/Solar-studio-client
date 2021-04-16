@@ -1,0 +1,26 @@
+.logo-img{
+    margin: 81px auto;
+    height: 47px;
+    width: 150px;
+}
+.login-popup{
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    width: 50%;
+    height: 350px;
+    margin: 10px auto;
+}
+.google-btn{
+    margin-top: 50px;
+    width: 50%;
+    
+}
+
+.googleSignBtn:hover{
+    text-decoration: none !important;
+    color: white;
+}
+.googleSignBtn{
+    text-decoration: none !important;
+    color: black;
+}

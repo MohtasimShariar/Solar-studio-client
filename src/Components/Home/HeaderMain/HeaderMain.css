@@ -1,0 +1,16 @@
+.headerMain-content{
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    background-color: #FBD062;
+}
+.headerMain-content::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #ffff;
+    clip-path: polygon(100% 30%, 0 100%, 100% 100%);
+}

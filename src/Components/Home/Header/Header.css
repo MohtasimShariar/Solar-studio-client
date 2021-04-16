@@ -1,0 +1,20 @@
+.text-area{
+    margin-top: 116px;
+}
+.text-area h2{
+    font-weight: 700;
+    font-size: 48px;
+}
+.text-area p{
+    font-weight: 600;
+    font-size: 16px;
+}
+.img-banner{
+    text-align: center;
+    height: 250px;
+    width: 320px;
+}
+.card{
+    background-color: transparent;
+}
+
