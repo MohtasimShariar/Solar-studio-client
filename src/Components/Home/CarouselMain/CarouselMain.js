@@ -7,8 +7,6 @@ import carouselFive from '../../images/carousel-5.png';
 
 import './CarouselMain.css';
 
-//no needd
-
 const CarouselMain = () => {
     return (
         <div style={{'padding': '10px 0px'}}>

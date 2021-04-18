@@ -1,17 +1,4 @@
-.feedback-client-img{
-    width: 74px;
-    height: 74px;
-    border-radius: 50%;
-}
-.feedback-client-margin{
-    margin-top: 50px;
-    border: 1px solid lightgray;
-    padding-top: 20px;
-    margin-left: 50px;
-    margin-right: 50px;
 
-}
-
-.client-info{
-    margin-left: 15px;
+.customStyle:hover{
+    background-color: #F5F6FA  !important;
 }

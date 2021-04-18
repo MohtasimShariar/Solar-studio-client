@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from 'react-router-dom';
 import { faHdd, faCommentAlt } from '@fortawesome/free-regular-svg-icons';
 import { faBars, faCartPlus, faPlus, faUserPlus } from '@fortawesome/free-solid-svg-icons';
-import logo from '../images/logos/logo.png';
+import logo from '../../images/logo.png';
 import './Sidebar.css';
 import { useEffect } from 'react';
 import { UserContext } from '../../App';
@@ -16,12 +16,13 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false);
 
     useEffect(() => {
-        fetch('http://localhost:5055/getAdmin', {
+        fetch('https://sleepy-sands-83794.herokuapp.com/getAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({email: loggedInUser.email})
         })
         .then(res => res.json())
+
         .then(data => {
             setIsAdmin(data);
             console.log(data);
@@ -31,11 +32,11 @@ const Sidebar = () => {
     console.log(isAdmin);
     
     return (
-        <div className="sidebar-content">
-            <div className="logo-container">
-                <Link to="/home"><img className="logo-img" src={logo} alt=""/></Link>
+        <div className="sidebar-content ">
+            <div className="logo-container text-center ">
+                <Link to="/home"><img  src={logo} alt="" width = '100' height= '100' /></Link>
             </div>
-            <div className="menu-item">
+            <div className="menu-item mb-10 pb-5 ">
                 <Link to='/dashboard'>
                     <h5> <span className="icon-style"><FontAwesomeIcon icon={faBars}/></span>
                     <span className="dashboard">Dashboard</span></h5>
@@ -61,7 +62,7 @@ const Sidebar = () => {
             </div>
              
             { isAdmin &&
-                <div>
+                <div className="mb-10 pb-5 ">
                     <div className="menu-item">
                         <Link to='/allServicesList'>
                             <h5><span className="icon-style"><FontAwesomeIcon icon={faHdd}/></span>
@@ -74,7 +75,7 @@ const Sidebar = () => {
                             <span className="dashboard">Add Service</span></h5>
                         </Link>
                     </div>
-                    <div className="menu-item">
+                    <div className="menu-item ">
                         <Link to='/makeAdmin'>
                             <h5><span className="icon-style"><FontAwesomeIcon icon={faUserPlus} /></span>
                             <span className="dashboard">Make Admin</span> </h5>                
@@ -82,9 +83,6 @@ const Sidebar = () => {
                     </div>
                 </div>
             }
-            <br/>
-            <br/>
-           
             
             
         </div>

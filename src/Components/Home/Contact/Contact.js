@@ -1,19 +1,16 @@
 import React from 'react';
 import './Contact.css';
-
-
-
-//no needd
-
-
+import designer from '../../../images/designer.jpg'
 const Contact = () => {
     return (
         <div className="container-fluid">
             <div className="row">
+             
                 <div style={{'margin-top': '90px'}} className="col-md-5 offset-md-1">
-                    <h3>Let us handle your <br/> project, professionally.</h3>
+                <img src={designer} style={{height:'auto', width:'50%'}} alt=""/>
+                    <h3>Let us handle your <br/> design, professionally.</h3>
                     <br/>
-                    <p>With well written codes, we build amazing apps for all <br/> platforms, mobile and web apps in general.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae alias inventore beatae culpa pariatur commodi perferendis suscipit odit id soluta?</p>
                 </div>
                 <div className="col-md-6">
                     <form action="" className="contact-form">

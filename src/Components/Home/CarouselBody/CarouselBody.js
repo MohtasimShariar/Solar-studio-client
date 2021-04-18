@@ -3,9 +3,6 @@ import CarouselMain from '../CarouselMain/CarouselMain';
 import { useSpring, animated } from 'react-spring';
 
 
-//NO NEEEEEEEEEEEEED THIS 
-
-
 const CarouselBody = () => {
 
     const props = useSpring({

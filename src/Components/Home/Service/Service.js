@@ -12,7 +12,7 @@ const Service = ({service}) => {
     const [event, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
 
     return (
-        <div className="col-md-3 text-center service-margin" style={{ 'marginBottom': '30px'}}>
+        <div className="col-md-2 text-center service-margin" style={{ 'marginBottom': '30px'}}>
             <animated.div
                 
                 onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
@@ -23,7 +23,7 @@ const Service = ({service}) => {
                     {
                         service.image ? <img className="img-fluid mb-3 service-img" src={`data:image/png;base64,${service.image.img}`}/>
                         :
-                        <img className="img-fluid mb-3 service-img" src={`http://localhost:5055/${service.img}`} alt=""/>
+                        <img className="img-fluid mb-3 service-img" src={`https://sleepy-sands-83794.herokuapp.com/${service.img}`} alt=""/>
                     }
                     <h5>{service.title}</h5>
                     <p>{service.description}</p>

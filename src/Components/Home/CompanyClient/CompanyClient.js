@@ -6,8 +6,6 @@ import netflix from '../../images/logos/netflix.png';
 import aribnd from '../../images/logos/airbnb.png';
 import './CompanyClient.css';
 
-//no needd
-
 const CompanyClient = () => {
     return (
         <section className="d-flex justify-content-around">

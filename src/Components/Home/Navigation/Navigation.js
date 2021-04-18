@@ -1,58 +1,65 @@
 import React, { useContext } from 'react';
-import logo from '../../images/logos/logo.png';
-import './Navigation.css';
+
+import logo from '../../../images/logo.png'
+
 import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import { UserContext } from '../../../App';
 
 const Navigation = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-    return (
-        <section>
-            <nav className="navbar navbar-expand-lg navbar-light">
-                <Link className="navbar-brand" to="/">
-                    <img id="main-logo" src={logo} alt=""/>
-                </Link>
-                
-                <div className="collapse navbar-collapse" id="navbarText">
-                    <ul className="navbar-nav ml-auto navigation-item">
-                        <li className="nav-item">
-                            
-                            <h5 className="nav-link" to="/home">{loggedInUser.name}</h5>
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  return (
+    <section className='container'>
+      <nav class="navbar navbar-expand-lg navbar-dark  bg-transparent">
+        <div class="container-fluid">
 
-                        </li>
-                    
-                        <li class="nav-item active">
-                            <Link className="nav-link" to="/home">Home<span class="sr-only">(current)</span></Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to={`/dashboard/${loggedInUser.name}`}>Dashboard</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/home">Our Portfolio</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/home">Our Team</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/home">Contact Us</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to="/login">
-                                <button type="button" className="btn btn-dark login-btn">Login</button>
-                            </Link>
-                        </li>
-                        
-                    </ul>
-                    
-                </div>
-            </nav>
-        </section>
-    );
+          <Link className="navbar-brand" to="/">
+            <img src={logo} alt="" width="75" height="75" />
+          </Link>
+          
+
+          <Link class="navbar-brand" href="#">Solar Studio</Link>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <Link className="nav-link text-light" to="/home">Home<span class="sr-only">(current)</span></Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link text-light" to={`/dashboard/${loggedInUser.name}`}>Dashboard</Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link text-light" to="/home">Our Team</Link>
+              </li>
+              <li class="nav-item">
+                <Link className="nav-link text-light" to="/home">Our Portfolio</Link>
+              </li>
+              <li class="nav-item">
+
+                {
+                  loggedInUser.name ? <Link className="btn btn-dark login-btn" style={{color:'white'}} to='/login'>{loggedInUser.name}</Link> : <Link to="/login"><Link to="/login">
+                  <button type="button" className="btn btn-dark login-btn">Login</button>
+                </Link></Link>
+                }
+
+
+
+              </li>
+            </ul>
+
+
+          </div>
+        </div>
+      </nav>
+    </section>
+  );
 };
 
 export default Navigation;

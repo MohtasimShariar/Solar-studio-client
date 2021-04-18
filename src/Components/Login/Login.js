@@ -1,10 +1,10 @@
 import React from 'react';
 import './Login.css';
-import logo from '../images/logos/logo.png';
+import logo from '../../images/logo.png';
 import { Link, useHistory, useLocation } from "react-router-dom";
 
 
-import firebase from "firebase/app";
+import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
 import { useContext } from 'react';
@@ -25,18 +25,28 @@ const Login = () => {
         firebase.auth().signInWithPopup(googleProvider).then(function(result) {
             const {displayName, email} = result.user;
             const signedInUser = {name: displayName, email }
+            setUserToken()
             setLoggedInUser(signedInUser);
             history.replace(from);
 
-          }).catch(function(error) {
+          })
+          .catch(function(error) {
             
+          });
+    }
+
+    const setUserToken = ()=>{
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+            sessionStorage.setItem('token',idToken)
+          }).catch(function(error) {
+            // Handle error
           });
     }
 
     return (
         <section>
             <div className="text-center">
-                <img className="logo-img" src={logo} alt=""/>
+                <img  src={logo} alt="" width= '75' height = '75' />
             </div>
             <div className="login-popup text-center ">
                 <br/>

@@ -4,15 +4,33 @@ import Sidebar from '../Sidebar/Sidebar';
 import './Order.css';
 import { useForm } from "react-hook-form";
 import { UserContext } from '../../App';
+import Payment from '../Payment/Payment';
 
 const Order = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const {name} = useParams();
     
     const {register, handleSubmit, errors} = useForm();
+
+
+    // const handlePaymentSuccess = paymentId=>{
+    //     data.ordererDate = new Date();
+    //     fetch('https://sleepy-sands-83794.herokuapp.com/addClientOrder', {
+    //         method: 'POST',
+    //         headers: { 'content-type': 'application/json' },
+    //         body: JSON.stringify(data)
+    //     })
+    //     .then(res => res.json())
+    //     .then(success => {
+    //         alert('Thanks for your order', success);
+    //     })
+    // }
+
+
     const onSubmit = data => {
+        
         data.ordererDate = new Date();
-        fetch('http://localhost:5055/addClientOrder', {
+        fetch('https://sleepy-sands-83794.herokuapp.com/addClientOrder', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(data)
@@ -32,10 +50,12 @@ const Order = () => {
                 
                 <div  className="col-md-10 order-board">
                     <span className="d-flex order-tagLine">
-                        <h3 style={{'margin-left':'80px', 'margin-top':'50px','color': '#DC3545'}}>Order</h3>
-                        <h6 style={{'margin-left':'580px', 'margin-top':'64px','color': '#DC3545'}}>{loggedInUser.name}</h6>
+                        <h3 style={{'margin-left':'80px', 'margin-top':'50px','color': '#928e8e'}}>Order</h3>
+                        <h6 style={{'margin-left':'580px', 'margin-top':'64px','color': '#928e8e'}}>{loggedInUser.name}</h6>
                     </span>
-                    <div className="order-form">
+          <div className="row">
+              <div className="col-md-6">
+              <div className="order-form">
                         
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div class="form-group">
@@ -57,11 +77,21 @@ const Order = () => {
                                 </div>   
                             </div>
                             <br/>
-                            <button type="submit" class="btn btn-dark">Send</button>
+                            
+
+                            <button type="submit" id='submitButton' class="btn btn-dark">Send</button>
                             
                         </form>
                             
                     </div>
+              </div>
+              <div className="col-md-6">
+                  
+                  <h5 className='text-center mt-5'>Pay Here</h5> <hr/>
+                  <Payment ></Payment>
+                  
+              </div>
+          </div>
                 </div>
                 
             </div>

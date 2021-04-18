@@ -9,7 +9,7 @@ const Review = () => {
 
     const onSubmit = info => {
         info.reviewDate = new Date();
-        fetch('http://localhost:5055/addClientReview', {
+        fetch('https://sleepy-sands-83794.herokuapp.com/addClientReview', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(info)
@@ -29,8 +29,8 @@ const Review = () => {
                 </div>
                 <div  className="col-md-10">
                     <span className="d-flex">
-                        <h3 style={{'margin-left':'80px', 'margin-top':'50px','color': '#DC3545'}}>Your Review</h3>
-                        <h6 style={{'margin-left':'580px', 'margin-top':'64px','color': '#DC3545'}}>{loggedInUser.name}</h6>
+                        <h3 style={{'margin-left':'80px', 'margin-top':'50px','color': '#928e8e'}}>Your Review</h3>
+                        <h6 style={{'margin-left':'580px', 'margin-top':'64px','color': '#928e8e'}}>{loggedInUser.name}</h6>
                     </span>
                     
                     <div className="order-form">

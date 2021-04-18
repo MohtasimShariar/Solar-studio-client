@@ -15,11 +15,11 @@ const Dashboard = () => {
                 </div>
                 <div  className="col-md-10 container-fluid">
                     <span className="d-flex">
-                        <h3 style={{'margin-left':'80px', 'margin-top':'50px','color': '#DC3545'}}>Dashboard</h3>
+                        <h3 style={{'margin-left':'80px', 'margin-top':'50px','color': '#928e8e'}}>Dashboard</h3>
                     </span>
                     
                     <div className="row customer-order-list">
-                        <h3 style={{'margin-left':'30%', 'margin-top':'64px','color': '#DC3545'}}>Welcome... <br/> {loggedInUser.name}</h3>
+                        <h3 style={{'margin-left':'30%', 'margin-top':'64px','color': '#928e8e'}}>Welcome... <br/> {loggedInUser.name}</h3>
                     </div>
                 </div>
                 
