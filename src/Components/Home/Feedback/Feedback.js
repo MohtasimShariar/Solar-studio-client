@@ -11,10 +11,10 @@ const Feedback = () => {
     }, [])
     
     return (
-        <section className="container" style={{'margin-top': '50px'}}>
-            <h3 className="text-center">What Our Clients say </h3>
+        <section className="container  bg-light" style={{'margin-top': '50px'}}>
+          <h3 className="text-center mt-5">Ours Clients <span style={{color: 'blueviolet'}}>Feedback</span></h3>
             <br/> <hr/>
-            <div className="row p-5 m-5">
+            <div className="row p-5 m-5 ">
                 {
                     client.map(client => <FeedbackClient client={client}></FeedbackClient>)
                 }

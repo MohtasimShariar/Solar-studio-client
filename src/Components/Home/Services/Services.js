@@ -17,8 +17,8 @@ const Services = () => {
     }, [])
 
     return (
-        <section className="container-fluid" style={{'margin-top': '50px', 'backgroundColor': '#F5F6FA'}}>
-            <h3 className="text-center pt-5">we are here to provide you <br/> our awsome <br/> <span style={{color: 'red'}}>SERVICES</span></h3>
+        <section className="container-fluid" style={{'margin-top': '0px', 'backgroundColor': '#CCC'}}>
+<h3 className="text-center pt-5">Provide awesome <span style={{color: 'blueviolet'}}>services</span></h3>
 
             <div className="search-container container" style={{'marginBottom': '50px', 'marginTop': '50px'}}>
                 <input 

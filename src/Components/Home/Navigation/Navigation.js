@@ -18,7 +18,7 @@ const Navigation = () => {
         <div class="container-fluid">
 
           <Link className="navbar-brand" to="/">
-            <img src={logo} alt="" width="75" height="75" />
+            <img src={logo} alt="" width="80" height="80" />
           </Link>
           
 

@@ -21,7 +21,7 @@ const AllServicesList = () => {
                 .delete(
                     `.https://sleepy-sands-83794.herokuapp.com/getAllClientsOrder/${id}`
                 )
-                .then(() => console.log('delete ss'));
+                .then(() => console.log('delete'));
     }, [id]);
 
 

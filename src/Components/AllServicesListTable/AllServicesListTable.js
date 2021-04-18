@@ -32,7 +32,7 @@ const AllServicesListTable = ({allServicesListItem}) => {
                     <th className="text-secondary" scope="col">Email</th>
                     <th className="text-secondary" scope="col">Service Name</th>
                     <th className="text-secondary" scope="col">Project Details</th>
-                    {/* <th className="text-secondary" scope="col">Status</th> */}
+                    <th className="text-secondary" scope="col">Status</th>
                     
                 </tr>
             </thead>
@@ -45,14 +45,14 @@ const AllServicesListTable = ({allServicesListItem}) => {
                         <td>{serviceName.email}</td>
                         <td>{serviceName.service}</td>
                         <td>{serviceName.description}</td>
-                        {/* <td><button className='btn btn-danger' onClick={() =>setId(data._id)}>delete</button></td> */}
+                        <td><button className='btn btn-danger' >delete</button></td>
                         <td>{
-                            // <div class="form-group">
-                            //     <select class="btn-outline-danger" id="exampleFormControlSelect1">
-                            //         <option>Pending</option>
-                            //         <option>Done</option>
-                            //     </select>
-                            // </div>   
+                            <div class="form-group">
+                                <select class="btn-outline-primary" id="exampleFormControlSelect1">
+                                    <option>Pending</option>
+                                    <option>Done</option>
+                                </select>
+                            </div>   
                         }</td>
                     </tr>
                     )

@@ -119,8 +119,7 @@ const CheckoutForm = () => {
     event.preventDefault();
 
     if (!stripe || !elements) {
-      // Stripe.js has not loaded yet. Make sure to disable
-      // form submission until Stripe.js has loaded.
+     
       return;
     }
 
@@ -177,7 +176,7 @@ const CheckoutForm = () => {
           label="Name"
           id="name"
           type="text"
-          placeholder="Jane Doe"
+          placeholder="onim"
           required
           autoComplete="name"
           value={billingDetails.name}
@@ -189,7 +188,7 @@ const CheckoutForm = () => {
           label="Email"
           id="email"
           type="email"
-          placeholder="janedoe@gmail.com"
+          placeholder="onim@gmail.com"
           required
           autoComplete="email"
           value={billingDetails.email}
@@ -235,8 +234,7 @@ const ELEMENTS_OPTIONS = {
   ]
 };
 
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
+
 const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 
 const SplitCardForm = () => {

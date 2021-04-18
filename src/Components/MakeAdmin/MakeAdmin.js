@@ -34,7 +34,7 @@ const MakeAdmin = () => {
                     
                     <div className="order-form">
                         <form onSubmit={handleSubmit(onSubmit)}>
-                            <h6>Admin's email address</h6>
+                            <h6>Admin email address</h6>
                             <div className="d-flex">
                                 <input type="email" defaultValue={loggedInUser.email} ref={register({ required: true })} name="email" className="form-control form-element" placeholder="Email address"/>
                                 <button type="submit" style={{'margin-left':'20px'}} class="btn btn-success">Submit</button> 

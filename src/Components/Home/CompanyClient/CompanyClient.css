@@ -1,5 +1,28 @@
-.img-size{
-    margin: 50px;
-    width: 100px;
-    height: 36px;
+
+
+.projectdata{
+    background-position: 50% 5px;
 }
+
+.Project-Completed{
+    visibility: visible;
+     animation-delay: 300ms;
+      animation-name: fadeInUp;
+    
+
+}
+.Awards-Won{
+    visibility: visible; 
+    animation-delay: 400ms;
+     animation-name: fadeInUp;
+}
+.Hours-Work{
+    visibility: visible;
+     animation-delay: 500ms;
+      animation-name: fadeInUp;
+}
+.Satisfied-Clients {visibility: visible; 
+    animation-delay: 600ms;
+     animation-name: fadeInUp;
+    }
+
