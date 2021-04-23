@@ -1,5 +1,4 @@
 import React, { createContext, useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Home from './Components/Home/Home/Home';
 import {
@@ -17,6 +16,7 @@ import AddService from './Components/AddService/AddService';
 import MakeAdmin from './Components/MakeAdmin/MakeAdmin';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Dashboard from './Components/Dashboard/Dashboard';
+
 
 export const UserContext = createContext();
 
