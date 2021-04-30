@@ -2,7 +2,7 @@
 
 # Web app name : Solar Studio
 
-# A online service provides site. It's serve to make 
+# A online service providing site. It's serve to make 
 1. logo
 2 . Video Editing 
 3 . Website design
