@@ -41,4 +41,4 @@ https://solar-studio-d83bc.web.app/
 
 # server link
 
-git server = https://github.com/Porgramming-Hero-web-course/complete-website-server-MohtasimShariar
+git server = https://github.com/MohtasimShariar/Solar-studio-server
